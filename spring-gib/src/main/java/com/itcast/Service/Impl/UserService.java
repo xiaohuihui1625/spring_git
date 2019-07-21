@@ -25,6 +25,6 @@ public class UserService implements com.itcast.Service.UserService {
     }
 
     public void saveUser(User user) {
-
+        dao.saveUser(user);
     }
 }

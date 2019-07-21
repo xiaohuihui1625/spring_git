@@ -19,6 +19,7 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
     }
 
     public void saveUser(User user) {
-
+        getJdbcTemplate().update("insert into user(username,birthday,sex,address) values(?,?,?,?)"
+                ,user.getUsername(),user.getBirthday(),user.getSex(),user.getAddress());
     }
 }
